@@ -8,7 +8,7 @@ import routes from './routes';
 import './styles/base.sass'
 
 const App = () => {
-  axios.defaults.baseURL = 'https://haomusicdb.herokuapp.com/'
+  axios.defaults.baseURL = 'https://buihuudat-music.herokuapp.com/'
   // axios.defaults.baseURL = 'http://localhost:5000/'
   return (
     <Router
