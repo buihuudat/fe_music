@@ -1,0 +1,44 @@
+@import '../../styles/mixins'
+@import '../../styles/colors'
+
+.genre-menu
+  width: 200px
+  padding: 15px
+  overflow-y: scroll
+  @include box-shadow
+  position: fixed
+  top: 50px
+  bottom: 0
+  padding-bottom: 50px
+  a
+    color: $grey-text
+    font-weight: 400
+    font-size: 14px
+
+.submenu-link-active
+  background: $first-color
+  a
+    color: #fff
+    font-weight: 500
+
+.submenu
+  li
+    &:hover
+      @extend .submenu-link-active
+    > a
+      display: block
+      padding: 10px
+
+  &-link-active
+
+
+  &-title
+    > a
+      font-size: 1rem
+      color: black
+      text-transform: uppercase
+      font-weight: 600
+      color: #fff
+
+
+  &-li

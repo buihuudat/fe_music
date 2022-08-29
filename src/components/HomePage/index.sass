@@ -1,0 +1,216 @@
+@import '../../styles/colors'
+
+@import '../../styles/mixins'
+
+.home
+  display: flex
+  flex-direction: column
+  width: 100%
+
+.hp-track-list-wrapper
+  width: 60%
+  float: left
+  padding-left: 20px
+  min-height: 200px
+
+.hp-track-list
+  position: relative
+  padding-bottom: 100px
+
+  li
+    height: 80px
+    font-size: 14px
+    position: relative
+    background: $first-color
+    transition: transform 0.3s ease-in-out
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+    margin-bottom: 20px
+    border-radius: 10px
+    &:hover
+      cursor: pointer
+    > div
+      height: inherit
+
+.isFading
+  opacity: 0.5
+  -webkit-filter: blur(2px)
+  -moz-filter: blur(2px)
+  -o-filter: blur(2px)
+  -ms-filter: blur(2px)
+  filter: blur(2px)
+
+.track-thumb
+  padding: .5rem
+  img
+    border-radius: 5px
+  float: left
+.trackPosition
+  line-height: 80px
+  vertical-align: middle
+  text-align: center
+  width: 10%
+  float: left
+  color: #fff
+.trackDetail
+  width: calc(100% - 40% - 80px)
+  float: left
+  padding: 10px 0
+
+.trackTitle
+  margin-top: 10px
+  a
+    color: #fff
+    &:hover
+      color: $grey-text
+.trackArtist
+  margin-top: 10px
+  a
+    font-size: 12px
+    color: $light-blue !important
+.trackActions
+  width: 30%
+  float: right
+  position: relative
+  .hp-track-toolbar
+    height: 100%
+    width: 100%
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    button
+      padding: 0
+    i
+      color: #cecbcb
+      font-size: 18px
+      margin-right: 20px
+      &:hover
+        cursor: pointer
+        opacity: 0.8
+
+i.ion-android
+  &-download
+    color: #27DED5 !important
+
+  &-share
+    color: #58D68D !important
+
+i.ion-more
+  color: #5D6D7E !important
+
+.chart-wrapper
+  margin-top: -60px
+  margin-right: 20px
+  width: 35%
+  float: right
+  padding: 0 15px
+
+.isDownloading
+  margin-right: 5px
+
+.home-nav
+  margin: 20px
+.choice
+  width: 20%
+  height: 40px
+  border-radius: 5px
+  border: 1px solid #27DED5
+  line-height: 40px
+  vertical-align: middle
+  padding-left: 20px
+  color: #27DED5
+  font-size: 15px
+  cursor: pointer
+  position: relative
+  font-family: "Roboto", sans-serif
+
+  &-active, &:hover
+    @extend .choice-active
+
+  i
+    float: right
+    margin-right: 20px
+
+  &-list
+    position: absolute
+    left: 0
+    right: 0
+    z-index: 1
+    border-radius: 10px
+    background: $first-color
+    color: #fff
+    box-shadow: 0 1px 8px rgba(0,0,0,.2)
+
+    li
+      padding-left: 20px
+      &:hover
+        color: #27DED5
+
+
+.choice-active
+  background-image: linear-gradient(to right, #02b3e4 0%, #02ccba 100%)
+  color: #fff
+
+.choice-active-item
+  color: #27DED5
+
+.chart-panel-btn-active
+  background-image: linear-gradient(to right, #02b3e4 0%, #02ccba 100%)
+  color: #fff !important
+
+.chart-panel
+  height: 50px
+  margin-bottom: 10px
+
+
+  button
+    &:not(.chart-panel-btn-active)
+      color: #5D6D7E !important
+    height: 100%
+    font-weight: 500
+    width: calc(100% / 3)
+    cursor: pointer
+    &:hover
+      border: 1px solid #27DED5
+
+.home-banner
+  height: 300px
+  padding-top: 50px
+  width: 100%
+  object-fill: cover
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap&family=Work+Sans:wght@500&display=swap')
+
+.home-banner-text
+  color: white
+  font-weight: 700
+  top: 40%
+  left: 40%
+  bottom: 20px
+  transform: translate(50, 50)
+  font-family: 'Montserrat', sans-serif
+  font-size: 40px
+  z-index: 99
+  position: absolute
+
+.developed-by 
+  position: absolute
+  right: 0
+  bottom: 0
+  padding: 50px
+  color: white
+  font-family: 'Montserrat', sans-serif
+  font-size: 20px
+
+.logo-text 
+  font-weight: 800
+  font-size: 35px
+  background: -webkit-linear-gradient(0deg,#3c50ca,#77d5f7)
+  font-family: "Work Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif
+  -webkit-background-clip: text
+  background-clip: text
+  -webkit-text-fill-color: transparent

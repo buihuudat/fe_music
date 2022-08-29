@@ -1,0 +1,283 @@
+@import "../../styles/colors"
+
+
+.nav__top 
+  background: $first-color
+  top: 0
+  left: 0
+  height: 50px
+  width: 100%
+  z-index: 3
+  padding: 0 50px
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+
+.nav__left
+  height: 100%
+  width: 265px
+  background: $first-color
+  position: fixed
+  z-index: 3
+  padding: 0 20px
+  left: 0
+  .nav_wrap 
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    justify-content: space-between
+
+.logo
+  height: 10%
+  width: 100%
+  img
+    width: 95px
+    height: 95px
+    margin: -20px
+
+  a
+    height: 100%
+    display: flex
+    align-items: center
+    color: #fff
+    line-height: 50px
+    font-size: 30px
+    font-family: 'Cabin Sketch', cursive
+    width: 100%
+    text-align: center
+
+
+.searchBar
+  position: relative
+  padding: 0 20px
+  input
+    width: 500px
+    height: 40px
+    border: none
+    background: $second-color
+    padding: 0 40px
+    font-size: 1.2rem
+    font-weight: 600
+    color: #fff
+    border-radius: 20px
+
+.search-wrapper
+  position: relative
+  i
+    color: #fff
+    position: absolute
+    font-size: 22px
+    top: 50%
+    transform: translateY(-50%)
+    left: 10px
+
+
+.nav-menu
+  display: flex
+  flex-direction: column
+  width: 100%
+  padding-top: .8rem
+  li
+    display: flex
+    text-align: center
+    justify-content: center
+    width: 100%
+    
+    i
+      font-size: 1.8rem
+      width: 20%
+    a
+      text-transform: uppercase
+      display: flex
+      width: 80%
+      line-height: 50px
+      vertical-align: middle
+      justify-content: space-around
+      padding: 0 10px
+      color: white
+      font-size: 1rem
+      font-weight: 500
+      text-align: center
+
+  &-link-active
+    &:before
+      visibility: visible !important
+      -webkit-transform: scaleX(1) !important
+      transform: scaleX(1) !important
+
+
+.auth-btns
+  width: 100%
+  height: max-content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  position: relative
+  
+  a
+    text-transform: uppercase
+    display: inline-block
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 50px
+    font-size: 13px
+    padding: 5px 8px
+    border-radius: 3px
+    width: 50%
+    float: left
+    color: white
+
+.auth-btns-img
+    width: 90px
+    height: 90px
+    margin: 0 auto
+    background: #999
+    border-radius: 50%
+
+    img
+      width: 20px
+      height: 20px
+      margin-right: 10px
+/* .sInLink
+  background: #fab005 */
+/* .sUpLink
+  background: $teal-1 */
+
+.navContent
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding-bottom: 10px
+
+  .user-top-logout
+    background: $second-color
+    width: 100%
+    padding: .5rem
+    transition: .3s ease
+    border-radius: 5px
+
+    &:hover 
+      background: $cyan-1
+    a
+      display: flex
+      flex-direction: row
+      align-items: center
+      gap: 20px
+      font-size: 1.5rem
+      color: #fff
+      text-transform: uppercase
+      text-align: center
+      justify-content: center 
+
+      img 
+        width: 25px
+        height: 25px
+
+.user
+  height: max-content
+  width: 100%
+  display: flex
+  flex-direction: column
+  line-height: 50px
+  vertical-align: middle
+
+  &-profile
+    margin-top: 1rem
+    width: 100%
+    height: 35px
+    background: none
+    border: 1px solid $cyan-1
+    border-radius: 20px
+    color: #fff
+    font-size: .9rem
+    cursor: pointer
+
+.user-top
+  display: flex
+  gap: 20px
+  align-items: center
+  flex-direction: row
+  width: 100%
+  justify-content: center
+  text-align: center
+
+  span
+    color: #fff
+    padding: 5px 10px
+    font-size: 12px
+    font-weight: 500
+    border: 1px solid $cyan-1
+    border-radius: 10px
+
+  .user-name
+    text-transform: uppercase
+    display: flex
+    gap: 10px
+    align-items: center
+    justify-content: center
+    height: 50px
+    font-size: 1rem
+    max-width: 115px
+    text-overflow: ellipsis
+    padding: 5px 8px
+    border-radius: 3px
+    width: 100%
+    color: white
+    font-weight: 600
+
+    img
+      width: 20px
+      height: 20px
+      margin-right: 10px
+
+.auth-btns-content
+  display: flex
+  flex-direction: row
+  gap: 20px
+  padding-top: 20px
+  a
+    height: 30px
+    border: 1px solid $cyan-1
+  .auth-btns-login:hover
+    background: $teal-1
+  .auth-btns-signup:hover
+    background: $cyan-1
+
+
+.nav-upgrade
+  display: flex
+  flex-direction: column
+  border-radius: 5px
+  padding: 20px
+  margin: 20px 0
+  text-align: center
+  color: #fff
+  background: rgb(29,206,219)
+  background: linear-gradient(158deg, rgba(29,206,219,1) 0%, rgba(166,134,247,1) 35%, rgba(241,121,108,1) 70%)
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
+  
+  span
+    font-size: 16px
+  ul
+    color: #ddd
+
+  button
+    background: $light-blue
+    border: none
+    border-radius: 10px
+    height: 30px
+    margin-top: 10px
+    color: #fff
+    cursor: pointer
+
+.nav-playlist
+  border-top: 1px solid #fff
+
+
+.li-admin:hover
+  background: $cyan-1

@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import React from 'react'
+import { Router } from 'react-router'
 
-function App() {
+import history from './history'
+import routes from './routes';
+
+import './styles/base.sass'
+
+const App = () => {
+  // axios.defaults.baseURL = 'https://haomusicdb.herokuapp.com/'
+  axios.defaults.baseURL = 'http://localhost:5000/'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router
+      history={history}
+      routes={routes}
+      onUpdate={() => window.scrollTo(0, 0)}
+    />
+  )
 }
 
-export default App;
+export default App
